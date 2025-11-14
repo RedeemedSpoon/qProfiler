@@ -7,7 +7,12 @@
 #define VERSION "0.0.1"
 
 typedef struct {
-  int _;
+  char *output;
+  char *append;
+  char *format;
+  char *command;
+  bool *minimal;
+  bool *verbose;
 } Options;
 
 typedef struct {
@@ -19,6 +24,10 @@ typedef struct {
 } Results;
 
 Options parse_args(int argc, char *argv[]);
+void print_explanation(void);
+void print_version(void);
+void print_help(void);
+
 RawResults monitor(Options options);
 Results aggregate_data(RawResults results);
 void show_results(Results results);
