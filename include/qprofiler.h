@@ -5,14 +5,16 @@
 #include <stddef.h>
 
 #define VERSION "0.0.1"
+#define SEPARATOR "--"
+#define MAX_COMMAND_LENGTH 2048
 
 typedef struct {
-  char *output;
-  char *append;
-  char *format;
-  char *command;
-  bool *minimal;
-  bool *verbose;
+  char *shell_command;
+  char *output_file;
+  char *format_style;
+  bool minimal_mode;
+  bool verbose_mode;
+  bool append_flag;
 } Options;
 
 typedef struct {
@@ -24,6 +26,7 @@ typedef struct {
 } Results;
 
 Options parse_args(int argc, char *argv[]);
+void print_error(char message[], ...);
 void print_explanation(void);
 void print_version(void);
 void print_help(void);

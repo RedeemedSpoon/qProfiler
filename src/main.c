@@ -1,11 +1,9 @@
 #include "qprofiler.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int main(int argc, char *argv[]) {
-  if (argc >= 1) {
-    printf("Usage: qprofiler [options] -- <shell_command>");
-    printf("Try 'qprofiler --help' for more information.");
+  if (argc <= 1) {
+    print_error("!Usage: qprofiler [options] -- <shell_command>");
     exit(1);
   }
 
