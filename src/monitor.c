@@ -1,4 +1,9 @@
 #include "qprofiler.h"
 
-RawResults monitor(Options options);
-Results aggregate_data(RawResults results);
+Results monitor(char *shell_command) {
+  static Results results;
+  (void)shell_command;
+  return results;
+}
+
+Results aggregate_data(Results *results);

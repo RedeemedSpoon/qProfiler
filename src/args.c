@@ -11,10 +11,9 @@ Options parse_args(int argc, char *argv[]) {
 
   options.shell_command = NULL;
   options.format_style = "txt";
-  options.minimal_mode = false;
-  options.verbose_mode = false;
   options.append_flag = false;
   options.output_file = NULL;
+  options.mode = DEFAULT;
 
   for (int i = 1; i < argc; i++) {
     const char *current_arg = argv[i];
@@ -55,13 +54,11 @@ Options parse_args(int argc, char *argv[]) {
     }
 
     else if (arg_matches(current_arg, "-m", "--minimal")) {
-      options.minimal_mode = true;
-      options.verbose_mode = false;
+      options.mode = MINIMAL;
     }
 
     else if (arg_matches(current_arg, "-v", "--verbose")) {
-      options.verbose_mode = true;
-      options.minimal_mode = false;
+      options.mode = VERBOSE;
     }
 
     else if (arg_matches(current_arg, "-a", "--append")) {

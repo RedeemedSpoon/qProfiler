@@ -12,7 +12,8 @@ add_executable(
   src/args.c
   src/print.c
   src/monitor.c
-  src/show.c
+  src/output.c
+  src/format.c
 )
 
 target_compile_options(qprofiler PRIVATE -O3)
