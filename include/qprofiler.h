@@ -37,6 +37,6 @@ void print_help(void);
 Results monitor(char *shell_command);
 Results aggregate_data(Results *results, Mode mode);
 void output_results(Results *results, Options *options);
-char *format_output(Results *result, char *format);
+char *format_output(Results *results, char *format);
 
 #endif

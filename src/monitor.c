@@ -5,5 +5,3 @@ Results monitor(char *shell_command) {
   (void)shell_command;
   return results;
 }
-
-Results aggregate_data(Results *results);
