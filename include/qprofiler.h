@@ -25,7 +25,28 @@ typedef struct {
 } Options;
 
 typedef struct {
-  int _;
+    double elapsed_time;
+    double user_cpu_time;
+    double system_cpu_time;
+    double total_cpu_time; 
+
+    unsigned long long bytes_read;
+    unsigned long long bytes_written;
+
+    unsigned long peak_rss;
+    unsigned long major_page_faults;
+    unsigned long minor_page_faults;
+    unsigned long swaps;
+    unsigned long block_inputs;
+    unsigned long block_outputs;
+    unsigned long vol_context_switches;
+    unsigned long invol_context_switches;
+    unsigned long read_syscalls;
+    unsigned long write_syscalls;
+    unsigned long signals_received;
+
+    float cpu_utilization;
+    int exit_status;
 } Results;
 
 Options parse_args(int argc, char *argv[]);

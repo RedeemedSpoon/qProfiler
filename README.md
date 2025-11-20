@@ -8,6 +8,7 @@ Minimal metrics :
 *   Peak Memory Usage (Max RSS)
 *   Block Input Operations
 *   Block Output Operations
+*   Exit Status
 
 Default metrics :
 
@@ -23,6 +24,7 @@ Default metrics :
 *   Bytes Written
 *   Block Input Operations
 *   Block Output Operations
+*   Exit Status
 
 Verbose metrics :
 
@@ -44,3 +46,4 @@ Verbose metrics :
 *   Voluntary Context Switches
 *   Involuntary Context Switches
 *   Signals Received
+*   Exit Status
