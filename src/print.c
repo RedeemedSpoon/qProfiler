@@ -22,7 +22,7 @@ void print_version(void) {
 }
 
 void print_help(void) {
-  printf("Usage: qprofiler [options] -- <command>\n\n");
+  printf("Usage: qprofiler [options] <command>\n\n");
   printf("A quick and simple profiler to measure the performance of any command.\n\n");
 
   printf("Options:\n");

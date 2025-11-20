@@ -19,18 +19,11 @@ Options parse_args(int argc, char *argv[]) {
   for (int i = 1; i < argc; i++) {
     const char *current_arg = argv[i];
 
-    // delimiter '--' is optional
-    if (current_arg[0] != '-' || !strcmp(current_arg, "--")) {
-      int start_index = strcmp(current_arg, "--") ? i : i + 1;
-      if (start_index >= argc) {
-        print_error("missing command to profile");
-        exit(1);
-      }
-
+    if (current_arg[0] != '-') {
       static char command_buffer[MAX_COMMAND_LENGTH];
       command_buffer[0] = '\0';
 
-      for (int j = start_index; j < argc; j++) {
+      for (int j = i; j < argc; j++) {
         if (strlen(command_buffer) + strlen(argv[j]) + 2 > sizeof(command_buffer)) {
           print_error("command is too long (max %zu characters)", sizeof(command_buffer) - 1);
           exit(1);
