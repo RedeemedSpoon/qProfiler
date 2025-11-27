@@ -1,6 +1,6 @@
 qProfiler is a command profiler tool that is both quick and easy to use, with support of a few option.
 
-Minimal metrics :
+**Minimal Metrics:**
 
 *   Elapsed (Wall-Clock) Time
 *   Total CPU Time
@@ -10,7 +10,7 @@ Minimal metrics :
 *   Block Output Operations
 *   Exit Status
 
-Default metrics :
+**Default Metrics:**
 
 *   Elapsed (Wall-Clock) Time
 *   CPU Utilization
@@ -20,13 +20,11 @@ Default metrics :
 *   Peak Memory Usage (Max RSS)
 *   Major Page Faults
 *   Swaps
-*   Bytes Read
-*   Bytes Written
 *   Block Input Operations
 *   Block Output Operations
 *   Exit Status
 
-Verbose metrics :
+**Verbose Metrics:**
 
 *   Elapsed (Wall-Clock) Time
 *   CPU Utilization
@@ -37,13 +35,8 @@ Verbose metrics :
 *   Major Page Faults
 *   Minor Page Faults
 *   Swaps
-*   Bytes Read
-*   Bytes Written
 *   Block Input Operations
 *   Block Output Operations
-*   Read Syscalls
-*   Write Syscalls
 *   Voluntary Context Switches
 *   Involuntary Context Switches
-*   Signals Received
 *   Exit Status
