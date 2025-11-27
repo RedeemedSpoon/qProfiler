@@ -12,8 +12,7 @@ int main(int argc, char *argv[]) {
   fprintf(stderr, "%s%s[qProfiler]%s Profiling command: ", COLOR_RED, STYLE_BOLD, COLOR_RESET);
   fprintf(stderr, "%s%s%s\n\n", COLOR_YELLOW, options.shell_command, COLOR_RESET);
 
-  Results raw_results = execute_and_monitor(options.shell_command);
-  Results results = aggregate_data(&raw_results, options.mode);
+  Results results = execute_and_monitor(options.shell_command);
   output_results(&results, &options);
 
   fflush(stderr);
