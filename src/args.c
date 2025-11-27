@@ -53,10 +53,6 @@ Options parse_args(int argc, char *argv[]) {
       exit(0);
     }
 
-    else if (arg_matches(current_arg, "-m", "--minimal")) {
-      options.mode = MINIMAL;
-    }
-
     else if (arg_matches(current_arg, "-v", "--verbose")) {
       options.mode = VERBOSE;
     }

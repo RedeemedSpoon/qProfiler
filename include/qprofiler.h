@@ -14,7 +14,7 @@
 #define COLOR_RESET "\x1b[0m"
 #define STYLE_BOLD "\x1b[1m"
 
-typedef enum { DEFAULT = 1, MINIMAL = 2, VERBOSE = 3 } Mode;
+typedef enum { DEFAULT = 1, VERBOSE = 2 } Mode;
 
 typedef struct {
   char *shell_command;

@@ -29,11 +29,7 @@ void print_help(void) {
   printf("  -o, --output <file>    Write the report to <file> instead of stdout.\n");
   printf("  -a, --append           Append to the output file if it exists (use with -o).\n");
   printf("  -f, --format <format>  Set output format. Can be 'txt', 'csv', or 'json'.\n\n");
-
-  printf("Metric Verbosity:\n");
-  printf("  -m, --minimal          Display only the minimal set of core metrics.\n");
   printf("  -v, --verbose          Display all available performance metrics for a detailed report.\n");
-  printf("                         (If neither is specified, a default, balanced report is shown).\n\n");
 
   printf("Information:\n");
   printf("  -x, --explain          Print a detailed explanation of each available metric and exit.\n");
@@ -72,21 +68,15 @@ void print_explanation(void) {
   printf("    strong indicator of heavy disk I/O or that the system has insufficient RAM.\n\n");
   printf("  Minor Page Faults:\n");
   printf("    Occurs when the command needs a memory page that is already in RAM but is not in\n");
-  printf("    the process's direct working set. These are fast, common, and not a concern.\n\n");
+  printf("    the process's direct working set. These are fast, common, and generally not a concern.\n\n");
   printf("  Swaps:\n");
   printf("    The number of times the process was entirely swapped out of RAM and onto the disk.\n");
   printf("    Any value greater than zero indicates severe memory pressure on the system.\n\n");
 
-  printf("--- I/O & System Call Metrics ---\n");
-  printf("  Bytes Read / Written:\n");
-  printf("    The actual number of bytes read from or written to a storage device.\n");
-  printf("    This is a precise measure of disk I/O volume.\n\n");
+  printf("--- I/O Metrics ---\n");
   printf("  Block Input / Output Operations:\n");
   printf("    A count of filesystem read and write operations. This is a rough measure of\n");
   printf("    I/O activity, where an \"operation\" corresponds to a block of data.\n\n");
-  printf("  Read / Write Syscalls:\n");
-  printf("    The number of read() and write() system calls the application made. This measures\n");
-  printf("    the frequency of I/O requests, not the volume of data.\n\n");
 
   printf("--- Scheduling Metrics ---\n");
   printf("  Voluntary Context Switches:\n");
@@ -94,8 +84,5 @@ void print_explanation(void) {
   printf("    to become available (e.g., waiting for a file to be read from the disk).\n\n");
   printf("  Involuntary Context Switches:\n");
   printf("    Occurs when the OS scheduler forces the command to give up the CPU (e.g., because\n");
-  printf("    its time slice expired or a higher-priority process needed to run).\n\n");
-  printf("  Signals Received:\n");
-  printf("    The total number of system signals (e.g., SIGINT, SIGTERM) delivered to the\n");
-  printf("    process during its execution.\n");
+  printf("    its time slice expired or a higher-priority process needed to run).\n");
 }
