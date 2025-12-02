@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 void output_results(Results *results, Options *options) {
-  char *output = format_output(results, options->format_style);
+  char *output = format_output(results, options->format_style, options->mode);
 
   if (options->output_file != NULL) {
     char *file_options = options->append_flag ? "a" : "w";
@@ -17,9 +17,11 @@ void output_results(Results *results, Options *options) {
 
     fprintf(fptr, "%s\n", output);
     fclose(fptr);
+    free(output);
     exit(0);
   }
 
-  fprintf(stderr, "%s\n", output);
+  fprintf(stderr, "\n%s\n", output);
+  free(output);
   exit(0);
 }

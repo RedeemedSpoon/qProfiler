@@ -58,6 +58,6 @@ void print_help(void);
 
 Results execute_and_monitor(char *shell_command);
 void output_results(Results *results, Options *options);
-char *format_output(Results *results, char *format);
+char *format_output(Results *results, char *format, Mode mode);
 
 #endif

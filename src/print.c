@@ -28,8 +28,8 @@ void print_help(void) {
   printf("Options:\n");
   printf("  -o, --output <file>    Write the report to <file> instead of stdout.\n");
   printf("  -a, --append           Append to the output file if it exists (use with -o).\n");
-  printf("  -f, --format <format>  Set output format. Can be 'txt', 'csv', or 'json'.\n\n");
-  printf("  -v, --verbose          Display all available performance metrics for a detailed report.\n");
+  printf("  -f, --format <format>  Set output format. Can be 'txt', 'csv', or 'json'.\n");
+  printf("  -v, --verbose          Display all available performance metrics for a detailed report.\n\n");
 
   printf("Information:\n");
   printf("  -x, --explain          Print a detailed explanation of each available metric and exit.\n");
