@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <img alt="qProfiler Showcase" src="./showcase.png" width="100%">
+  </picture>
+</p>
+
+## Overview
+
 **qProfiler** is a command-line profiling tool designed to be both quick and simple. It allows developers and system administrators to measure the performance of any command or executable with ease, providing insights into time, CPU usage, and memory consumption.
 
 ## Installation
