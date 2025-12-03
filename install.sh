@@ -53,7 +53,7 @@ fi
 info "Verifying installation..."
 hash -r 
 
-if command -v qprofiler &> /dev/null; then
+if command -V qprofiler &> /dev/null; then
     success "qProfiler has been installed successfully!"
     echo -e "You can now run it using: ${GREEN}qprofiler${NC}"
 else
